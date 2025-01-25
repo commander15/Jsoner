@@ -1,9 +1,0 @@
-module Jsoner
-linktarget JsonerQml
-optional plugin JsonerQml
-classname JsonerPlugin
-typeinfo Jsoner.qmltypes
-prefer :/Jsoner/
-JsonListModel 1.0 JsonListModel.qml
-JsonListModelRole 1.0 JsonListModelRole.qml
-

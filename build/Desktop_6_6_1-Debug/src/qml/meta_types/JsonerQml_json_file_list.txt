@@ -1,2 +1,0 @@
-/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/qml/JsonerQml_autogen/include/../EWIEGA46WW/moc_jsonlistmodel.cpp.json
-/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/qml/JsonerQml_autogen/include/JsonerQml_JsonerPlugin.moc.json
