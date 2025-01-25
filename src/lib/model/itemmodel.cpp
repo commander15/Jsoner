@@ -25,7 +25,7 @@ QVariant ItemModel::headerData(int section, Qt::Orientation orientation, int rol
     if (orientation == Qt::Horizontal && (role == Qt::DisplayRole || role == Qt::EditRole)) {
         if (d_ptr->headers.contains(section))
             return d_ptr->headers.value(section);
-        else if (section < columnCount())
+        else if (section < fieldCount())
             return fieldName(section);
     }
 
