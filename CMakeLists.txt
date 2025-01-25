@@ -14,6 +14,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 include(cmake/Utils.cmake)
 
+install(FILES cmake/FindJsoner.cmake DESTINATION share/cmake/Modules)
+
 # Finding Qt
 set(QT_MODULES Core)
 if (JSONER_BUILD_QML)
