@@ -24,6 +24,6 @@ install(FILES
 )
 
 install(EXPORT JsonerTargets
-    NAMESPACE Jsoner
+    NAMESPACE Jsoner::
     DESTINATION lib/cmake/Jsoner
 )
