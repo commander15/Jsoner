@@ -19,7 +19,7 @@ write_basic_package_version_file(${CMAKE_CURRENT_SOURCE_DIR}/JsonerConfigVersion
 )
 
 install(FILES
-    JsonerConfig.cmake JsonConfigVersion.cmake
+    JsonerConfig.cmake JsonerConfigVersion.cmake
     DESTINATION lib/cmake/Jsoner
 )
 
