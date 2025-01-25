@@ -12,7 +12,7 @@ configure_package_config_file(JsonerConfig.cmake.in ${CMAKE_CURRENT_SOURCE_DIR}/
     INSTALL_DESTINATION lib/cmake/Jsoner
 )
 
-write_basic_package_version_file(JsonerConfigVersion.cmake
+write_basic_package_version_file(${CMAKE_CURRENT_SOURCE_DIR}/JsonerConfigVersion.cmake
     VERSION ${PROJECT_VERSION}
     COMPATIBILITY AnyNewerVersion
     ARCH_INDEPENDENT
