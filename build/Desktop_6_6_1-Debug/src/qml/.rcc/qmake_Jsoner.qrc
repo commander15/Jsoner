@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/Jsoner">
+    <file alias="qmldir">/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/qml/Jsoner/qmldir</file>
+  </qresource>
+</RCC>
+

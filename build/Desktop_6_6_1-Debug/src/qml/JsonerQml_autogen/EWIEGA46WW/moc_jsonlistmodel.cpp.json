@@ -1,0 +1,169 @@
+{
+    "classes": [
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "JsonListModelBase"
+                },
+                {
+                    "name": "QML.AddedInVersion",
+                    "value": "256"
+                }
+            ],
+            "className": "JsonListModel",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "roles",
+                    "read": "roles",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QQmlListProperty<JsonListModelRole>",
+                    "user": false
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "data",
+                    "notify": "jsonDataChanged",
+                    "read": "jsonData",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariant",
+                    "user": false,
+                    "write": "setJsonData"
+                }
+            ],
+            "qualifiedClassName": "JsonListModel",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "jsonDataChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QAbstractListModel"
+                }
+            ]
+        },
+        {
+            "classInfos": [
+                {
+                    "name": "QML.Element",
+                    "value": "JsonListModelRoleBase"
+                },
+                {
+                    "name": "QML.AddedInVersion",
+                    "value": "256"
+                }
+            ],
+            "className": "JsonListModelRole",
+            "object": true,
+            "properties": [
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 0,
+                    "name": "name",
+                    "notify": "nameChanged",
+                    "read": "name",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setName"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 1,
+                    "name": "propertyName",
+                    "notify": "propertyNameChanged",
+                    "read": "propertyName",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QString",
+                    "user": false,
+                    "write": "setPropertyName"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 2,
+                    "name": "aliases",
+                    "notify": "aliasesChanged",
+                    "read": "aliases",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QStringList",
+                    "user": false,
+                    "write": "setAliases"
+                },
+                {
+                    "constant": false,
+                    "designable": true,
+                    "final": false,
+                    "index": 3,
+                    "name": "value",
+                    "notify": "valueChanged",
+                    "read": "value",
+                    "required": false,
+                    "scriptable": true,
+                    "stored": true,
+                    "type": "QVariant",
+                    "user": false,
+                    "write": "setValue"
+                }
+            ],
+            "qualifiedClassName": "JsonListModelRole",
+            "signals": [
+                {
+                    "access": "public",
+                    "name": "nameChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "propertyNameChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "aliasesChanged",
+                    "returnType": "void"
+                },
+                {
+                    "access": "public",
+                    "name": "valueChanged",
+                    "returnType": "void"
+                }
+            ],
+            "superClasses": [
+                {
+                    "access": "public",
+                    "name": "QObject"
+                }
+            ]
+        }
+    ],
+    "inputFile": "jsonlistmodel.h",
+    "outputRevision": 68
+}

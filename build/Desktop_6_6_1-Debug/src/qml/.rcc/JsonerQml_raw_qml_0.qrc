@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/Jsoner/">
+    <file alias="JsonListModel.qml">/home/commander/Projects/Jsoner/src/qml/JsonListModel.qml</file>
+    <file alias="JsonListModelRole.qml">/home/commander/Projects/Jsoner/src/qml/JsonListModelRole.qml</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,27 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"src/lib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"id" : "Jsoner_autogen_timestamp_deps::@dc1a1c76835bc3d8b019",
+	"isGeneratorProvided" : true,
+	"name" : "Jsoner_autogen_timestamp_deps",
+	"paths" : 
+	{
+		"build" : "src/lib",
+		"source" : "src/lib"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

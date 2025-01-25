@@ -1,0 +1,61 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"src/lib/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 25,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"lib/libJsoner.a"
+			],
+			"targetId" : "Jsoner::@dc1a1c76835bc3d8b019",
+			"targetIndex" : 0,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "include/Jsoner",
+			"paths" : 
+			[
+				"src/lib/global.h",
+				"src/lib/config.h",
+				"src/lib/debug.h",
+				"src/lib/object.h",
+				"src/lib/array.h",
+				"src/lib/model/jsonitemmodel.h",
+				"src/lib/model/jsontablemodel.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "src/lib",
+		"source" : "src/lib"
+	}
+}

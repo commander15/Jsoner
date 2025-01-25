@@ -1,0 +1,121 @@
+{
+	"BUILD_DIR" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib/Jsoner_autogen",
+	"CMAKE_BINARY_DIR" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/commander/Projects/Jsoner/src/lib",
+	"CMAKE_EXECUTABLE" : "/opt/CMake/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/commander/Projects/Jsoner/src/lib/CMakeLists.txt",
+		"/home/commander/Projects/Jsoner/src/lib/config.h.in"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/commander/Projects/Jsoner",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib/Jsoner_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "Jsoner_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/commander/Projects/Jsoner/src/lib/array.h",
+			"Mu",
+			"EWIEGA46WW/moc_array.cpp",
+			null
+		],
+		[
+			"/home/commander/Projects/Jsoner/src/lib/debug.h",
+			"Mu",
+			"EWIEGA46WW/moc_debug.cpp",
+			null
+		],
+		[
+			"/home/commander/Projects/Jsoner/src/lib/model/jsonitemmodel.h",
+			"Mu",
+			"NLOY5YBGEN/moc_jsonitemmodel.cpp",
+			null
+		],
+		[
+			"/home/commander/Projects/Jsoner/src/lib/model/jsontablemodel.h",
+			"Mu",
+			"NLOY5YBGEN/moc_jsontablemodel.cpp",
+			null
+		],
+		[
+			"/home/commander/Projects/Jsoner/src/lib/object.h",
+			"Mu",
+			"EWIEGA46WW/moc_object.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib/Jsoner_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib/Jsoner_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [ "QT_CORE_LIB" ],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/include",
+		"/opt/Qt/6.6.1/gcc_64/include/QtCore",
+		"/opt/Qt/6.6.1/gcc_64/include",
+		"/opt/Qt/6.6.1/gcc_64/mkspecs/linux-g++",
+		"/usr/include/c++/11",
+		"/usr/include/x86_64-linux-gnu/c++/11",
+		"/usr/include/c++/11/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/11/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/x86_64-linux-gnu-g++",
+		"-dM",
+		"-E",
+		"-c",
+		"/opt/CMake/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib/Jsoner_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib/CMakeFiles/Jsoner_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/opt/Qt/6.6.1/gcc_64/./libexec/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 6,
+	"SETTINGS_FILE" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug/src/lib/CMakeFiles/Jsoner_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/commander/Projects/Jsoner/src/lib/array.cpp", "Mu", null ],
+		[ "/home/commander/Projects/Jsoner/src/lib/debug.cpp", "Mu", null ],
+		[
+			"/home/commander/Projects/Jsoner/src/lib/model/jsonitemmodel.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/commander/Projects/Jsoner/src/lib/model/jsontablemodel.cpp",
+			"Mu",
+			null
+		],
+		[ "/home/commander/Projects/Jsoner/src/lib/object.cpp", "Mu", null ]
+	],
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

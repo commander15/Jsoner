@@ -1,0 +1,247 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "src",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src-Debug-b6cf2213fc5053b67c22.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src"
+				},
+				{
+					"build" : "src/lib",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.lib-Debug-8bd45829cab7800f1bf1.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/lib",
+					"targetIndexes" : 
+					[
+						0,
+						9,
+						10
+					]
+				},
+				{
+					"build" : "src/qml",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-src.qml-Debug-ef510c28a34bf0cfa8bb.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "src/qml",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					],
+					"name" : "Jsoner",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "Jsoner::@dc1a1c76835bc3d8b019",
+					"jsonFile" : "target-Jsoner-Debug-02c0208f1fc96624fd88.json",
+					"name" : "Jsoner",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml-Debug-af4b8ba47d0a47bbdd78.json",
+					"name" : "JsonerQml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml_autogen::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml_autogen-Debug-d7b0f6d51da184fa7ac0.json",
+					"name" : "JsonerQml_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml_autogen_timestamp_deps::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml_autogen_timestamp_deps-Debug-8e9c34308179a5cfb28e.json",
+					"name" : "JsonerQml_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml_qmllint::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml_qmllint-Debug-72d2e72444327cb06add.json",
+					"name" : "JsonerQml_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml_qmllint_json::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml_qmllint_json-Debug-f46d3aab689691e7ec84.json",
+					"name" : "JsonerQml_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml_qmllint_module::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml_qmllint_module-Debug-2ec75c5b719c0f67ee68.json",
+					"name" : "JsonerQml_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml_qmltyperegistration::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml_qmltyperegistration-Debug-b7abfb919878a2781413.json",
+					"name" : "JsonerQml_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "JsonerQml_tooling::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-JsonerQml_tooling-Debug-2db39f922db79b006b15.json",
+					"name" : "JsonerQml_tooling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Jsoner_autogen::@dc1a1c76835bc3d8b019",
+					"jsonFile" : "target-Jsoner_autogen-Debug-89a5d6081e934ae6045e.json",
+					"name" : "Jsoner_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Jsoner_autogen_timestamp_deps::@dc1a1c76835bc3d8b019",
+					"jsonFile" : "target-Jsoner_autogen_timestamp_deps-Debug-eaaeafe316fc0a88441c.json",
+					"name" : "Jsoner_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmllint::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-all_qmllint-Debug-df2eccf71aee18b8dc6c.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmllint_json::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-all_qmllint_json-Debug-af7f07d8f624c3c8c264.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmllint_module::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-all_qmllint_module-Debug-3d83e8d324fc1ffcc9bd.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "all_qmltyperegistrations::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-1eae97ff39fd534e3ebf.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "qt_internal_plugins::@6d748f83d1377c8d8467",
+					"jsonFile" : "target-qt_internal_plugins-Debug-14e8a564ac08c0d9d938.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/commander/Projects/Jsoner/build/Desktop_6_6_1-Debug",
+		"source" : "/home/commander/Projects/Jsoner"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
