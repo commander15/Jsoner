@@ -7,7 +7,7 @@
 namespace Jsoner {
 
 class ListModelPrivate;
-class JSONER_EXPORT ListModel : public Jsoner::ItemModel
+class JSONER_EXPORT ListModel : public ItemModel
 {
     Q_OBJECT
 

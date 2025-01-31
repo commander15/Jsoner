@@ -45,4 +45,9 @@ int ListModel::fieldCount() const
     return 1;
 }
 
+ListModelPrivate::ListModelPrivate(ListModel *q)
+    : ItemModelPrivate(q)
+{
+}
+
 } // namespace Jsoner
