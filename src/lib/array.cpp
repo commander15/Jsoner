@@ -15,6 +15,11 @@ Array::Array(const QJsonArray &other)
 {
 }
 
+Array::Array(const QJsonValue &other)
+    : QJsonArray(other.toArray())
+{
+}
+
 /**
  * @brief Constructs an Array by moving from a QJsonArray.
  *

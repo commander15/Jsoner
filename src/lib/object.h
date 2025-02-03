@@ -14,6 +14,7 @@ class JSONER_EXPORT Object : public QJsonObject
 public:
     Object() = default;
     Object(const QJsonObject &other);
+    Object(const QJsonValue &other);
     Object(QJsonObject &&other);
 
     Object &operator=(const QJsonObject &other);

@@ -18,6 +18,11 @@ Object::Object(const QJsonObject &other)
 {
 }
 
+Object::Object(const QJsonValue &other)
+    : QJsonObject(other.toObject())
+{
+}
+
 /**
  * @brief Constructs an Object by moving from a QJsonObject.
  *

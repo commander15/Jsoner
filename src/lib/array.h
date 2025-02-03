@@ -13,6 +13,7 @@ class JSONER_EXPORT Array : public QJsonArray
 public:
     Array() = default;
     Array(const QJsonArray &other);
+    Array(const QJsonValue &other);
     Array(QJsonArray &&other);
 
     Array &operator=(const QJsonArray &other);
