@@ -3,6 +3,11 @@
 
 namespace Jsoner {
 
+Array::Array(std::initializer_list<QJsonValue> args)
+    : QJsonArray(args)
+{
+}
+
 /**
  * @brief Constructs an Array from a QJsonArray.
  *
@@ -10,6 +15,7 @@ namespace Jsoner {
  *
  * @param other The QJsonArray to copy.
  */
+
 Array::Array(const QJsonArray &other)
     : QJsonArray(other)
 {

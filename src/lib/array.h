@@ -12,6 +12,7 @@ class JSONER_EXPORT Array : public QJsonArray
 {
 public:
     Array() = default;
+    Array(std::initializer_list<QJsonValue> args);
     Array(const QJsonArray &other);
     Array(const QJsonValue &other);
     Array(QJsonArray &&other);
