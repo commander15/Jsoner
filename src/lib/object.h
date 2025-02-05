@@ -44,6 +44,11 @@ public:
 
     bool operator==(const QJsonObject &other) const;
     bool operator!=(const QJsonObject &other) const;
+
+private:
+    bool hasValue(const QString &path) const;
+    QVariant getValue(const QString &path) const;
+    void setValue(const QString &path, const QVariant &value);
 };
 
 } // namespace Jsoner

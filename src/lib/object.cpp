@@ -76,7 +76,7 @@ Object &Object::operator=(QJsonObject &&other)
  */
 bool Object::has(const QString &key) const
 {
-    return contains(key);
+    return hasValue(key);
 }
 
 /**
@@ -90,7 +90,7 @@ bool Object::has(const QString &key) const
  */
 bool Object::boolean(const QString &key) const
 {
-    return variant(key).toBool();
+    return getValue(key).toBool();
 }
 
 /**
@@ -105,7 +105,7 @@ bool Object::boolean(const QString &key) const
  */
 bool Object::boolean(const QString &key, bool defaultValue) const
 {
-    return has(key) ? variant(key).toBool() : defaultValue;
+    return hasValue(key) ? getValue(key).toBool() : defaultValue;
 }
 
 /**
@@ -118,7 +118,7 @@ bool Object::boolean(const QString &key, bool defaultValue) const
  */
 int Object::integer(const QString &key) const
 {
-    return variant(key).toInt();
+    return getValue(key).toInt();
 }
 
 /**
@@ -133,7 +133,7 @@ int Object::integer(const QString &key) const
  */
 int Object::integer(const QString &key, int defaultValue) const
 {
-    return has(key) ? variant(key).toInt() : defaultValue;
+    return hasValue(key) ? getValue(key).toInt() : defaultValue;
 }
 
 /**
@@ -146,7 +146,7 @@ int Object::integer(const QString &key, int defaultValue) const
  */
 double Object::number(const QString &key) const
 {
-    return variant(key).toDouble();
+    return getValue(key).toDouble();
 }
 
 /**
@@ -161,7 +161,7 @@ double Object::number(const QString &key) const
  */
 double Object::number(const QString &key, double defaultValue) const
 {
-    return has(key) ? variant(key).toDouble() : defaultValue;
+    return hasValue(key) ? getValue(key).toDouble() : defaultValue;
 }
 
 /**
@@ -174,7 +174,7 @@ double Object::number(const QString &key, double defaultValue) const
  */
 QString Object::string(const QString &key) const
 {
-    return variant(key).toString();
+    return getValue(key).toString();
 }
 
 /**
@@ -189,7 +189,7 @@ QString Object::string(const QString &key) const
  */
 QString Object::string(const QString &key, const QString &defaultValue) const
 {
-    return has(key) ? variant(key).toString() : defaultValue;
+    return hasValue(key) ? getValue(key).toString() : defaultValue;
 }
 
 /**
@@ -202,7 +202,7 @@ QString Object::string(const QString &key, const QString &defaultValue) const
  */
 QVariant Object::variant(const QString &key) const
 {
-    return value(key).toVariant();
+    return getValue(key);
 }
 
 /**
@@ -217,7 +217,7 @@ QVariant Object::variant(const QString &key) const
  */
 QVariant Object::variant(const QString &key, const QVariant &defaultValue) const
 {
-    return has(key) ? value(key).toVariant() : defaultValue;
+    return hasValue(key) ? getValue(key) : defaultValue;
 }
 
 /**
@@ -284,6 +284,56 @@ bool Object::operator==(const QJsonObject &other) const
 bool Object::operator!=(const QJsonObject &other) const
 {
     return !operator==(other);
+}
+
+bool Object::hasValue(const QString &path) const {
+    const QStringList keys = path.split('.');
+    QJsonValue value = *this;
+
+    for (const QString &key : keys) {
+        if (!value.isObject()) return false;
+        value = value.toObject().value(key);
+    }
+
+    return !value.isUndefined();
+}
+
+QVariant Object::getValue(const QString &path) const {
+    const QStringList keys = path.split('.');
+    QJsonValue value = *this;
+
+    for (const QString &key : keys) {
+        if (!value.isObject()) return QVariant();
+        value = value.toObject().value(key);
+    }
+
+    return value.isUndefined() ? QVariant() : value.toVariant();
+}
+
+void Object::setValue(const QString &path, const QVariant &value) {
+    QStringList keys = path.split('.');
+    if (keys.isEmpty()) return;
+
+    QJsonObject obj = *this;
+    QJsonObject *current = &obj;
+
+    QVector<QJsonObject*> hierarchy;
+    hierarchy.append(current);
+
+    for (int i = 0; i < keys.size() - 1; ++i) {
+        QJsonObject next = current->value(keys[i]).toObject();
+        hierarchy.append(new QJsonObject(next));
+        current = hierarchy.last();
+    }
+
+    current->insert(keys.last(), QJsonValue::fromVariant(value));
+
+    for (int i = hierarchy.size() - 2; i >= 0; --i) {
+        hierarchy[i]->insert(keys[i], *hierarchy[i + 1]);
+        delete hierarchy[i + 1];
+    }
+
+    *this = *hierarchy.first();
 }
 
 } // namespace Jsoner
