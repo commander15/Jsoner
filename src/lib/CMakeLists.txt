@@ -24,6 +24,8 @@ target_sources(Jsoner
         model/listmodel.cpp
 )
 
+target_include_directories(Jsoner PUBLIC $<INSTALL_INTERFACE:include> $<INSTALL_INTERFACE:include/Jsoner>)
+
 target_link_libraries(Jsoner PUBLIC Qt::Core)
 
 generate_target_headers(Jsoner FOLDER Jsoner)
