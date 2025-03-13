@@ -42,13 +42,20 @@ QString TableModel::fieldName(int index) const
 int TableModel::fieldCount() const
 {
     JSONER_D(const TableModel);
-    return d->fields.size();
+    return d->fields.count();
 }
 
 TableModelPrivate::TableModelPrivate(TableModel *q)
     : ItemModelPrivate(q)
     , fieldsDiscovered(false)
 {
+}
+
+void TableModelPrivate::clearModel()
+{
+    fields.clear();
+    fieldsDiscovered = false;
+    ItemModelPrivate::clearModel();
 }
 
 } // namespace Jsoner

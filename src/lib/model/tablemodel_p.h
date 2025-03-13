@@ -12,6 +12,8 @@ class TableModelPrivate : public ItemModelPrivate
 public:
     TableModelPrivate(TableModel *q);
 
+    void clearModel() override;
+
     QStringList fields;
     bool fieldsDiscovered;
 };
