@@ -10,9 +10,12 @@ class ItemModelPrivate
 public:
     ItemModelPrivate(ItemModel *q);
 
+    virtual void clearModel();
+
     ItemModel *q_ptr;
 
-    QMap<int, QVariant> headers;
+    QMap<int, QVariant> columnHeaders;
+    QMap<int, QVariant> rowHeaders;
     Array array;
 };
 

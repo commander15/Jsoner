@@ -35,8 +35,14 @@ public:
     Object object(int index) const;
     void setObject(int index, const Object &object);
 
+    void addObject(const Jsoner::Object &object);
+    void removeObject(int index);
+
     Array array() const;
     void setArray(const Array &array);
+
+public slots:
+    void clear(bool onlyData = true);
 
 protected:
     ItemModel(ItemModelPrivate *d, QObject *parent = nullptr);

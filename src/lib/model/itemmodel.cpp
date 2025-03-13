@@ -23,10 +23,15 @@ ItemModel::~ItemModel()
 QVariant ItemModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (orientation == Qt::Horizontal && (role == Qt::DisplayRole || role == Qt::EditRole)) {
-        if (d_ptr->headers.contains(section))
-            return d_ptr->headers.value(section);
+        if (d_ptr->columnHeaders.contains(section))
+            return d_ptr->columnHeaders.value(section);
         else if (section < fieldCount())
             return fieldName(section);
+    }
+
+    if (orientation == Qt::Vertical && (role == Qt::DisplayRole || role == Qt::EditRole)) {
+        if (d_ptr->rowHeaders.contains(section))
+            return d_ptr->rowHeaders.value(section);
     }
 
     return QAbstractItemModel::headerData(section, orientation, role);
@@ -35,7 +40,13 @@ QVariant ItemModel::headerData(int section, Qt::Orientation orientation, int rol
 bool ItemModel::setHeaderData(int section, Qt::Orientation orientation, const QVariant &value, int role)
 {
     if (orientation == Qt::Horizontal && (role == Qt::DisplayRole || role == Qt::EditRole)) {
-        d_ptr->headers.insert(section, value);
+        d_ptr->columnHeaders.insert(section, value);
+        emit headerDataChanged(orientation, section, section);
+        return true;
+    }
+
+    if (orientation == Qt::Vertical && (role == Qt::DisplayRole || role == Qt::EditRole)) {
+        d_ptr->rowHeaders.insert(section, value);
         emit headerDataChanged(orientation, section, section);
         return true;
     }
@@ -75,12 +86,12 @@ QModelIndex ItemModel::parent(const QModelIndex &child) const
 
 int ItemModel::rowCount(const QModelIndex &parent) const
 {
-    return (!parent.isValid() ? d_ptr->array.size() : 0);
+    return (parent.isValid() ? 0 : d_ptr->array.size());
 }
 
 int ItemModel::columnCount(const QModelIndex &parent) const
 {
-    return (!parent.isValid() ? fieldCount() : 0);
+    return (parent.isValid() ? 0 : fieldCount());
 }
 
 QVariant ItemModel::value(const QString &path, int index) const
@@ -153,9 +164,23 @@ Object ItemModel::object(int index) const
 
 void ItemModel::setObject(int index, const Object &object)
 {
-    beginInsertRows(QModelIndex(), index, index);
+    const QModelIndex parent;
     d_ptr->array.insert(index, object);
+    emit dataChanged(this->index(index, 0, parent), this->index(index, fieldCount(), parent));
+}
+
+void ItemModel::addObject(const Object &object)
+{
+    beginInsertRows(QModelIndex(), d_ptr->array.count(), d_ptr->array.count());
+    d_ptr->array.append(object);
     endInsertRows();
+}
+
+void ItemModel::removeObject(int index)
+{
+    beginRemoveRows(QModelIndex(), index, index);
+    d_ptr->array.removeAt(index);
+    endRemoveRows();
 }
 
 Array ItemModel::array() const
@@ -170,9 +195,24 @@ void ItemModel::setArray(const Array &array)
     endResetModel();
 }
 
+void ItemModel::clear(bool onlyData)
+{
+    beginResetModel();
+    d_ptr->array = Array();
+    if (!onlyData)
+        d_ptr->clearModel();
+    endResetModel();
+}
+
 ItemModelPrivate::ItemModelPrivate(ItemModel *q)
     : q_ptr(q)
 {
+}
+
+void ItemModelPrivate::clearModel()
+{
+    columnHeaders.clear();
+    rowHeaders.clear();
 }
 
 }
