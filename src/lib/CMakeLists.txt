@@ -1,4 +1,4 @@
-add_library(Jsoner)
+qt_add_library(Jsoner)
 
 configure_file(config.h.in ${CMAKE_CURRENT_SOURCE_DIR}/config.h @ONLY)
 
