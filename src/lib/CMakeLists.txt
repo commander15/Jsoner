@@ -24,6 +24,14 @@ target_sources(Jsoner
         model/listmodel.cpp
 )
 
+target_compile_definitions(Jsoner
+    PUBLIC
+        JSONER_LIB
+    PRIVATE
+        $<IF:$<STREQUAL:$<TARGET_PROPERTY:TYPE>,STATIC_LIBRARY>,JSONER_STATIC,JSONER_SHARED>
+        JSONER_BUILD
+)
+
 target_include_directories(Jsoner PUBLIC $<INSTALL_INTERFACE:include> $<INSTALL_INTERFACE:include/Jsoner>)
 
 target_link_libraries(Jsoner PUBLIC Qt::Core)
