@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.27)
 
 project(Jsoner
     DESCRIPTION "Json extension for Qt"
@@ -11,6 +11,9 @@ option(JSONER_BUILD_QML OFF "Build the QML module")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+set(CXX_STANDARD 17)
+set(CXX_STANDARD_REQUIRED TRUE)
 
 include(cmake/Utils.cmake)
 
