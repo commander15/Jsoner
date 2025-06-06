@@ -1,3 +1,3 @@
-set(JSONER_MODULES Core;Qml)
+set(JSONER_MODULES Core)
 
 include(${CMAKE_CURRENT_LIST_DIR}/JsonerTargets.cmake)

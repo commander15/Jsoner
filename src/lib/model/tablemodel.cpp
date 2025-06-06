@@ -36,7 +36,7 @@ void TableModel::setFields(const QStringList &fields)
 QString TableModel::fieldName(int index) const
 {
     JSONER_D(const TableModel);
-    return d->fields.at(index);
+    return index >= 0 && index < d->fields.count() ? d->fields.at(index) : QString();
 }
 
 int TableModel::fieldCount() const
